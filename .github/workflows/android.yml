@@ -13,6 +13,7 @@ jobs:
     env:
       KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
       KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
       
     steps:
     - uses: actions/checkout@v3
@@ -31,6 +32,7 @@ jobs:
       run: 
         echo "print 22"
         ehco "KEY_PASSWORD=$KEY_PASSWORD"
+        ehco "KEY_ALIAS=$KEY_ALIAS"
         ehco "STORE_PASSWORD=$STORE_PASSWORD"
       
 #     - name: Grant execute permission for gradlew
