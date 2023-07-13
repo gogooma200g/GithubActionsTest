@@ -33,7 +33,7 @@ jobs:
         ehco "KEY_ALIAS=$KEY_ALIAS"
         ehco "STORE_PASSWORD=$STORE_PASSWORD"
     - name: sign
-      run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner verify --print-certs /app-release-unsigned.apk
+      run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner verify --print-certs app-release-unsigned.apk
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
