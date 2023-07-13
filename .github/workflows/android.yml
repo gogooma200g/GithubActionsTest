@@ -27,13 +27,14 @@ jobs:
     - name: Create KeyStore File and Properties
       run: mkdir ./app/signing
     - name: pp
-      env: 
-        STORE_PASSWORD: $
       run: 
         echo "print 22"
         ehco "KEY_PASSWORD=$KEY_PASSWORD"
         ehco "KEY_ALIAS=$KEY_ALIAS"
         ehco "STORE_PASSWORD=$STORE_PASSWORD"
+    - name: sign
+      run:
+        apksigner verify --print-certs --verbose /app-release-unsigned.apk
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
