@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-      KEY_PASSWORD: $
+      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       
     steps:
     - uses: actions/checkout@v3
@@ -28,7 +28,10 @@ jobs:
     - name: pp
       env: 
         STORE_PASSWORD: $
-      run: ehco KEY_ALIAS=\"$KEY_ALIAS\"
+        KEY_ALIAS: $
+      run: 
+        echo "print"
+        ehco KEY_ALIAS=\"$KEY_ALIAS\"
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
