@@ -34,7 +34,7 @@ jobs:
         ehco "STORE_PASSWORD=$STORE_PASSWORD"
     - name: sign
 #       run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner verify --print-certs app-release-unsigned.apk
-      run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner sign --v1-signing-enabled true --v2-signing-enabled true --ks gat.gks -ks-key-alias malife --ks-pass pass:malife6221 --key-pass pass:malife6221 app-release-unsigned.apk
+      run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner sign --v1-signing-enabled true --v2-signing-enabled true --ks gat.gks -ks-key-alias gat --ks-pass pass:1q1q1q --key-pass pass:1q1q1q app-release-unsigned.apk
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
