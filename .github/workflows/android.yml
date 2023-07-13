@@ -30,7 +30,8 @@ jobs:
         STORE_PASSWORD: $
       run: 
         echo "print 22"
-        ehco "KEY_PASSWORD=\"$KEY_PASSWORD\"
+        ehco "KEY_PASSWORD=$KEY_PASSWORD"
+        ehco "STORE_PASSWORD=$STORE_PASSWORD"
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
