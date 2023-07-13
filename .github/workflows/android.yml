@@ -36,10 +36,9 @@ jobs:
 #       run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner verify --print-certs app-release-unsigned.apk
       run: $ANDROID_SDK_ROOT/build-tools/33.0.1/apksigner sign --v1-signing-enabled true --v2-signing-enabled true --ks gat.gks -ks-key-alias gat --ks-pass pass:1q1q1q --key-pass pass:1q1q1q app-release-unsigned.apk
       
-    - name: Upload Apk 
     - uses: actions/upload-artifact@v3
       with: 
-        name: android-artifact
+        name: apk-artifact
         path: app-release-unsigned.apk
        
        
