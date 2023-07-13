@@ -28,10 +28,9 @@ jobs:
     - name: pp
       env: 
         STORE_PASSWORD: $
-        KEY_ALIAS: $
       run: 
-        echo "print"
-        ehco KEY_ALIAS=\"$KEY_ALIAS\"
+        echo "print 22"
+        ehco "KEY_PASSWORD=\"$KEY_PASSWORD\"
       
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
