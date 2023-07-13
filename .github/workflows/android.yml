@@ -11,8 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      KEY_ALIAS: $
-      STORE_PASSWORD: $
+      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
       KEY_PASSWORD: $
       
     steps:
@@ -27,7 +26,10 @@ jobs:
     - name: Create KeyStore File and Properties
       run: mkdir ./app/signing
     - name: pp
-      run: echo "KEY_ALIAS : $KEY_ALIAS"
+      env: 
+        STORE_PASSWORD: $
+      run: ehco "STORE_PASSWORD= $STORE_PASSWORD"
+      
 #     - name: Grant execute permission for gradlew
 #       run: chmod +x gradlew
 #     - name: Build with Gradle
